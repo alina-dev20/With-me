@@ -1,0 +1,245 @@
+/* Сброс стилей */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Определение переменных для цветов */
+:root {
+    --black: #000; /* Черный цвет */
+    --white: #FFF; /* Белый цвет */
+    --accent: #5C62EC; /* Акцентный синий цвет */
+    --bg: #f4f4f4; /* Фоновый цвет */
+    --text: #333; /* Основной текст */
+}
+
+/* Основной фон */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+/* Навигация */
+.nav {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 28px;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.nav-list {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-list__item {
+    list-style: none;
+}
+
+.nav-list__link {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-list__link:hover {
+    color: var(--accent); /* Акцентный цвет */
+}
+
+/* Хедер */
+/* Хедер */
+.header {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 120px 20px 60px;
+    margin-top: 60px;
+}
+
+.header__wrapper {
+    padding: 0 150px;
+}
+
+.header__content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header__title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.header__title em {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    color: var(--accent);
+}
+
+.header__text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px;
+    color: var(--white);
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    background: linear-gradient(135deg, var(--accent), #3b50a0);
+    color: var(--white);
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+
+.btn--primary {
+    background: linear-gradient(135deg, var(--accent), #3b50a0); /* Градиент для кнопки */
+}
+
+.btn:hover {
+    background-color: #3b50a0; /* Цвет для наведения на кнопку */
+    transform: scale(1.05); /* Эффект увеличения при наведении */
+}
+
+.btn:active {
+    transform: scale(1); /* Сбрасываем эффект увеличения после клика */
+}
+
+
+.section {
+    padding: 70px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Заголовок */
+.title-1 {
+    margin-bottom: 60px;
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--accent);
+    text-align: center;
+}
+.projects {
+    display: flex; 
+    justify-content: space-between; 
+    gap: 20px; /* Расстояние между карточками */
+    flex-wrap: wrap; /* Разрешаем перенос элементов на следующую строку, если не помещаются */
+    padding: 0; /* Убираем стандартные отступы у списка */
+    list-style: none; /* Убираем маркеры списка */
+}
+
+.project {
+    background-color: var(--white);
+    box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 100%; /* По умолчанию будет занимать всю ширину, но это изменится на больших экранах */
+    max-width: 320px; /* Максимальная ширина карточки */
+    text-align: center;
+}
+
+/* Изображение проекта */
+.project__img {
+    width: 100%; /* Заставляем изображение занимать всю ширину карточки */
+    height: 200px; /* Фиксированная высота */
+    object-fit: cover; /* Обрезаем изображение, чтобы оно не растягивалось */
+    border-radius: 10px 10px 0 0; /* Округляем только верхнюю часть */
+}
+
+.project__title {
+    padding: 15px 20px 35px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--black);
+}
+
+/* Подвал */
+/* Подвал */
+.footer {
+    background-color: var(--black); /* Черный фон */
+    color: var(--white); /* Белый текст */
+    text-align: center;
+    padding: 40px 20px; /* Отступы сверху и снизу */
+    margin-top: 60px; /* Отступ сверху */
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 27px;
+}
+.social {
+    display: flex; /* Используем flexbox для горизонтального расположения */
+    align-self: center;
+    gap: 20px; /* Расстояние между иконками */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.social__item {
+    display: inline-block;
+}
+
+.social__item img {
+    width: 40px; /* Размер иконок */
+    height: 40px;
+    transition: transform 0.3s ease; /* Плавный эффект при наведении */
+}
+
+.social__item img:hover {
+    transform: scale(1.1); /* Эффект увеличения иконки при наведении */
+}
+
+.copyright {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
