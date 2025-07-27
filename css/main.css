@@ -75,7 +75,6 @@ body {
 }
 
 /* Хедер */
-/* Хедер */
 .header {
     background-color: var(--black);
     color: var(--white);
@@ -142,6 +141,48 @@ body {
     transform: scale(1); /* Сбрасываем эффект увеличения после клика */
 }
 
+/* "Обо мне" */
+.about-me {
+    padding: 60px 20px;
+    background-color: var(--light-gray);
+    color: var(--accent); 
+}
+
+.about-me__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-me__info {
+    flex: 1;
+    max-width: 600px; /* Ограничим ширину текста */
+}
+
+.about-me__info h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.about-me__info p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--black);
+}
+
+.about-me__photo {
+    flex: 1;
+    max-width: 550px; /* Ограничим максимальную ширину изображения */
+}
+
+.about-me__img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
 .section {
     padding: 70px 0;
