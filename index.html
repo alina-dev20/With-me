@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>With me</title>
     <link rel="stylesheet" href="/css/main.css">
-
+    <script src="script.js" defer></script>
+    
 </head>
 <body>
     <nav class="nav">
@@ -14,9 +15,14 @@
             <div class="nav-row">
                 <a href="./index.html" class="logo"><b>Portfolio</b></a>
                 <ul class="nav-list">
-                    <li class="nav-list__item"><a href="index.html" class="nav-list__link">Project</a></li>
-                    <li class="nav-list__item"><a href="index.html" class="nav-list__link">Skills</a></li>
-                    <li class="nav-list__item"><a href="index.html" class="nav-list__link">Contacts</a></li>
+                    <li class="nav-list__item"><a href="index.html" class="nav-list__link" data-translate="project_title">Project</a></li>
+                    <li class="nav-list__item"><a href="index.html" class="nav-list__link" data-translate="skills">Skills</a></li>
+                    <li class="nav-list__item"><a href="index.html" class="nav-list__link" data-translate="contact">Contacts</a></li>
+              
+                    <select id="language-selector">
+                        <option value="en">English</option>
+                        <option value="ru">Русский</option>
+                    </select>
                 </ul>
             </div>
         </div>
@@ -25,13 +31,13 @@
     <header class="header">
         <div class="container">
         <div class="header__wrapper">
-            <h1 class="header__title"><strong>Hi, my name is <em>Alina!</em></strong>
-                a frontend developer
-            </h1>
+            <!-- Заголовок с переводом -->
+            <h1 class="header__title" data-translate="header_title"></h1>
+            <!-- Подзаголовок с переводом -->
             <div class="header_text">
-                <p>with passion for learning and creating</p>
+                <p data-translate="header_subtitle"></p>
             </div>
-            <a href="#" class="btn">My GitHub</a>
+            <a href="#" class="btn" data-translate="github_button"></a>
         </div>
     </div>
     </header>
@@ -40,9 +46,8 @@
         <div class="container">
             <div class="about-me__wrapper">
                 <div class="about-me__info">
-                    <h2>About Me</h2>
-                    <p>Hello! I'm Alina, a passionate frontend developer. I specialize in building beautiful and functional websites using HTML, CSS, JavaScript, and React. I have a strong desire to keep learning and improving my skills every day.</p>
-                    <p>When I'm not coding, you can find me exploring new technologies, traveling, or spending time with my loved ones.</p>
+                    <h2 data-translate="about_me"></h2>
+                    <p data-translate="about_text"></p>
                 </div>
                 <div class="about-me__photo">
                     <img src="/img/laptop.jpg" alt="Your photo" class="about-me__img">
@@ -103,6 +108,7 @@
         </div>
     </div>
     </footer>
+
 
 </body>
 </html> 

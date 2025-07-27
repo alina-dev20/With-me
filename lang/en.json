@@ -1,0 +1,11 @@
+{
+    "header_title": "Hi, my name is <em>Alina!</em>",
+    "header_subtitle": "A frontend developer with passion for learning and creating",
+    "about_me": "About Me",
+    "about_text": "Hello! I'm Alina, a passionate frontend developer. I specialize in building beautiful and functional websites using HTML, CSS, JavaScript, and React. I have a strong desire to keep learning and improving my skills every day. When I'm not coding, you can find me exploring new technologies, traveling, or spending time with my loved ones.",
+    "project_title": "Project",
+    "skills": "Skills",
+    "contact": "Contacts",
+    "github_button": "My GitHub",
+    "footer_text": "2025 frontend-dev.com"
+}
