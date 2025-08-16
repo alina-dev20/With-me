@@ -141,16 +141,16 @@ body {
 
 
 .btn--primary {
-    background: linear-gradient(135deg, var(--accent), #3b50a0); /* Градиент для кнопки */
+    background: linear-gradient(135deg, var(--accent), #3b50a0); 
 }
 
 .btn:hover {
     background-color: #3b50a0; /* Цвет для наведения на кнопку */
-    transform: scale(1.05); /* Эффект увеличения при наведении */
+    transform: scale(1.05); 
 }
 
 .btn:active {
-    transform: scale(1); /* Сбрасываем эффект увеличения после клика */
+    transform: scale(1); 
 }
 
 /* "Обо мне" */
@@ -245,10 +245,16 @@ body {
     font-size: 18px;
     font-weight: 600;
     color: var(--black);
+    text-decoration:none
+}
+.project__title a:hover {
+    color:#5C62EC
+}
+.project-section__link {
+    color: var(--black);
+    text-decoration:none
 }
 
-/* Подвал */
-/* Подвал */
 .footer {
     background-color: var(--black); /* Черный фон */
     color: var(--white); /* Белый текст */
@@ -295,4 +301,119 @@ body {
     font-weight: 300;
 }
 
-
+/* ===== Mobile-first доп. переменные и базовые улучшения ===== */
+:root {
+    --light-gray: #f6f7fb; /* использовалась в .about-me, добавим */
+  }
+  
+  /* комфортные тач-цели, отключаем лишние блики */
+  .btn { min-height: 44px; -webkit-tap-highlight-color: transparent; }
+  body { -webkit-text-size-adjust: 100%; }
+  
+  /* чтобы якоря не прятались под фикс-меню */
+  section, .section, .header { scroll-margin-top: 76px; }
+  
+  /* ===== Телефоны ===== */
+  @media (max-width: 600px) {
+    /* фикс-меню компактнее и удобнее */
+    .nav { padding: 12px 0; }
+    .nav .container { padding: 0 12px; }
+    .logo { font-size: 22px; }
+  
+    /* горизонтальный скролл по пунктам меню (без переносов) */
+    .nav-list {
+      gap: 12px;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .nav-list::-webkit-scrollbar { display: none; }
+    .nav-list__link { font-size: 14px; padding: 8px 0; }
+  
+    /* шапка: меньше отступы, адекватные размеры шрифтов */
+    .header {
+      padding: 84px 16px 32px;  /* учёт фикс-меню */
+      margin-top: 56px;         /* высота меню на мобилке */
+      text-align: left;
+    }
+    .header__wrapper { padding: 0; }
+    .header__title {
+      font-size: clamp(24px, 7vw, 32px);
+      line-height: 1.25;
+      word-break: break-word;
+      margin-bottom: 12px;
+    }
+    .header__text {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    #language-selector { font-size: 14px; padding: 8px 10px; }
+  
+    /* секции и заголовки */
+    .section { padding: 40px 0; }
+    .title-1 {
+      font-size: clamp(22px, 7.2vw, 32px);
+      margin-bottom: 24px;
+    }
+  
+    /* блок "Обо мне" — в колонку */
+    .about-me { padding: 40px 16px; }
+    .about-me__wrapper {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 20px;
+    }
+    .about-me__info { max-width: none; }
+    .about-me__info h2 { font-size: 24px; margin-bottom: 12px; }
+    .about-me__info p { font-size: 16px; line-height: 1.6; color: var(--text); }
+    .about-me__photo { max-width: 260px; align-self: center; }
+    .about-me__img { width: 100%; height: auto; border-radius: 16px; }
+  
+    /* проекты — по одному в строке, на всю ширину */
+    .projects {
+      justify-content: center;
+      gap: 16px;
+    }
+    .project {
+      width: 100%;
+      max-width: none;
+    }
+    .project__img { height: 180px; }
+    .project__title { font-size: 16px; padding: 12px 16px 20px; }
+  
+    /* кнопки компактнее, но кликабельные */
+    .btn {
+      font-size: 16px;
+      padding: 10px 18px;
+    }
+  
+    /* футер */
+    .footer { padding: 28px 16px; margin-top: 40px; }
+    .footer__wrapper { row-gap: 18px; }
+    .social { gap: 16px; }
+    .social__item img { width: 32px; height: 32px; }
+  }
+  
+  /* ===== Планшеты (опционально, сгладить переход) ===== */
+  @media (min-width: 601px) and (max-width: 900px) {
+    .nav .container { padding: 0 16px; }
+    .header { padding: 100px 24px 48px; margin-top: 60px; }
+    .header__wrapper { padding: 0 24px; }
+    .title-1 { font-size: 40px; }
+    .projects { justify-content: center; gap: 20px; }
+    .project { max-width: 340px; }
+  }
+  
+  /* доступность: видимая подсветка фокуса */
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  
+  /* учёт вырезов на iPhone */
+  body {
+    padding-top: max(0px, env(safe-area-inset-top));
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+    padding-bottom: max(0px, env(safe-area-inset-bottom));
+  }
+  
