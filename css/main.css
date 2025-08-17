@@ -69,12 +69,24 @@ body {
     transition: color 0.3s ease;
 }
 #language-selector {
-    text-decoration: none;
-}
-
-.nav-list__link:hover {
-    color: var(--accent); /* Акцентный цвет */
-}
+    font-size: 16px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.4);
+    background: transparent;
+    color: var(--white);
+    cursor: pointer;
+  
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  
+    /* фикс выравнивания */
+    line-height: 1;           /* убираем лишнюю высоту строки */
+    vertical-align: middle;   /* ставим по центру строки */
+    position: relative;
+    top: 0px;                
+} 
 
 /* Хедер */
 .header {
@@ -304,7 +316,7 @@ body {
 }
 /* ===== Mobile-first: до 600px ===== */
 @media (max-width: 600px) {
-    /* Навигация */
+    Навигация
     .nav {
       padding: 12px 10px;
       font-size: 14px;
