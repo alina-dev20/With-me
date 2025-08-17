@@ -35,7 +35,6 @@ body {
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
-
 .nav .container {
     display: flex;
     justify-content: space-between;
@@ -308,6 +307,10 @@ body {
       padding: 12px 10px;
       font-size: 14px;
     }
+    #language-selector {
+        font-size: 14px;
+        padding: 0px 8px;
+      }
     .nav .container {
       flex-direction: row;
       justify-content: space-between;
